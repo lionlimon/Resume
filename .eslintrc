@@ -6,6 +6,7 @@
     "node": true
   },
   "extends": [
+    "airbnb-base",
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/typescript/recommended"
@@ -16,5 +17,17 @@
   "plugins": [
   ],
   "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~", "./src"]
+        ],
+
+        "extensions": [".js",".ts", ".vue", ".scss"]
+      }
+    }
   }
 }
