@@ -3,25 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,vue}": "eslint --fix",
-    "*.{css,scss,vue}": "stylelint --fix"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore . --fix",
     "preview": "vite preview",
-    "lint:style": "stylelint src/**/*.{css,scss,vue}",
+    "lint:style": "stylelint src/**/*.{css,scss,vue} --fix",
     "prepare": "husky install"
   },
   "dependencies": {
     "husky": "^8.0.1",
+    "stylelint-config-recommended-vue": "^1.4.0",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -32,7 +24,8 @@
     "@vue/eslint-config-typescript": "^11.0.2",
     "eslint": "^8.25.0",
     "eslint-plugin-vue": "^9.6.0",
-    "lint-staged": "^13.0.3",
+    "husky": "^8.0.0",
+    "postcss-html": "^1.5.0",
     "sass": "^1.55.0",
     "stylelint": "^14.13.0",
     "stylelint-config-recommended": "^9.0.0",
