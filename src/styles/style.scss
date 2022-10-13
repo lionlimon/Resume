@@ -1,15 +1,18 @@
 @import "/node_modules/normalize.css";
+@import "./variables";
+
+* { box-sizing: border-box }
 
 .app {
   height: 100vh;
   width: 100vw;
-  background-color: #e5e5f7;
   overflow: hidden;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
+    z-index: -1;
     width: 2000vw;
     height: 2000vh;
     left: 50%;

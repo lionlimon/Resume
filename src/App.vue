@@ -1,8 +1,7 @@
 <template>
-  <div>
-    app
-  </div>
+  <HomePage />
 </template>
 
 <script setup lang="ts">
+import HomePage from '@/pages/HomePage';
 </script>
