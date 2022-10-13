@@ -14,16 +14,27 @@
   "parserOptions": {
     "ecmaVersion": 2021
   },
-  "plugins": [
-  ],
   "rules": {
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./"
+      },
+
       "alias": {
         "map": [
-          ["~", "./src"]
+          ["@", "./src"]
         ],
 
         "extensions": [".js",".ts", ".vue", ".scss"]
