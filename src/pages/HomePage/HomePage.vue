@@ -20,6 +20,8 @@
           />
         </div>
 
+        <div class="pc__drive" />
+
         <RoundButton class="pc__turn-on">
           <SvgIcon
             class="pc__turn-on-icon"
