@@ -1,6 +1,11 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+
+const svgIconsConfig = {
+  iconDirs: [resolve(__dirname, './src/assets/icons')],
+};
 
 export default defineConfig({
   resolve: {
@@ -9,5 +14,8 @@ export default defineConfig({
     },
   },
 
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    createSvgIconsPlugin(svgIconsConfig),
+  ],
 });
