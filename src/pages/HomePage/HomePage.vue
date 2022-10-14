@@ -7,8 +7,21 @@
           screen
         </div>
       </div>
+
+      <div class="pc__bottom-panel">
+        <div class="pc__volume">
+          <SwitchButton v-model="volumeIsOn" />
+        </div>
+      </div>
     </div>
   </main>
 </template>
+
+<script lang="ts" setup>
+import SwitchButton from '@/components/SwitchButton';
+import { ref } from 'vue';
+
+const volumeIsOn = ref(false);
+</script>
 
 <style scoped lang="scss" src="./HomePage.scss"></style>
