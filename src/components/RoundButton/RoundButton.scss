@@ -1,0 +1,36 @@
+.button {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  border-bottom: 3px solid rgba(black, .2);
+  box-shadow: 0 1px 4px rgba(black, 0.25);
+  background-color: rgb(var(--pc-color));
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  transition: transform .25s,
+    border-bottom-width .25s;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 1px 4px rgba(var(--green), 1);
+  }
+
+  &:active {
+    border-bottom-width: 0;
+    transform: translateY(3px);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

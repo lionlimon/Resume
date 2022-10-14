@@ -106,6 +106,22 @@
   }
 
   &__bottom-panel {
-    padding: 60px 0;
+    padding: 10px 0;
   }
+
+  &__volume {
+    display: flex;
+    align-items: center;
+  }
+
+  &__volume-icon {
+    margin-left: 10px;
+    opacity: .3;
+  }
+
+  &__turn-on-icon {
+    opacity: .3;
+  }
+
+
 }

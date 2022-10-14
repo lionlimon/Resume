@@ -1,8 +1,10 @@
 <template>
-  <svg aria-hidden="true">
+  <svg
+    :width="props.width"
+    :height="props.height"
+    aria-hidden="true"
+  >
     <use
-      :width="props.width"
-      :height="props.height"
       :href="symbolId"
     />
   </svg>
