@@ -3,7 +3,9 @@
     <div class="pc__screen-frame pc__super-ellipse">
       <div class="pc__screen pc__super-ellipse">
         <div class="pc__screen-light" />
-        <slot />
+        <div class="pc__content">
+          <slot />
+        </div>
       </div>
     </div>
 

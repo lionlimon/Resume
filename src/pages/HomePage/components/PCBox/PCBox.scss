@@ -10,9 +10,8 @@
   border-radius: 30px;
   border: 15px solid #776b46;
   border-right-color: #897e58;
+  border-bottom: 20px #59512d;
   border-left-color: #675c35;
-  border-bottom-color: #59512d;
-  border-bottom-width: 20px;
 
   position: relative;
   overflow: hidden;
@@ -29,6 +28,12 @@
     opacity: 0.3;
     background-image: url("@/assets/img/noise-pattern.png");
     pointer-events: none;
+  }
+
+  &__content {
+    color: rgb(var(--green));
+    position: relative;
+    z-index: 99;
   }
 
   &__screen-frame {
@@ -56,7 +61,7 @@
   &__screen-light {
     position: absolute;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     bottom: 0;
     right: -0.7%;
