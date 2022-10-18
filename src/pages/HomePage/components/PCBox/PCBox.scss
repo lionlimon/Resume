@@ -34,6 +34,9 @@
     color: rgb(var(--green));
     position: relative;
     z-index: 99;
+
+    font-family: var(--pixel-font);
+    font-size: 12px;
   }
 
   &__screen-frame {

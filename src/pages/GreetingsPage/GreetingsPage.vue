@@ -1,6 +1,6 @@
 <template>
   <div class="greetings">
-    Hello
+    Привет
   </div>
 </template>
 
