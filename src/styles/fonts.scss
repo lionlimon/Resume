@@ -1,11 +1,12 @@
 /* press-start-2p-regular - latin_cyrillic */
 @font-face {
-  font-family: 'Press Start 2P';
+  font-family: "Press Start 2P";
   font-style: normal;
   font-weight: 400;
-  src: url('@/assets/fonts/P2S.ttf');
-  src: local(''),
-  url('@/assets/fonts/P2S.woff2') format('woff2'),
-  url('@/assets/fonts/P2S.woff') format('woff'),
-  url('@/assets/fonts/P2S.ttf') format('truetype')
+  src: url("@/assets/fonts/P2S.ttf");
+  src:
+    local(""),
+    url("@/assets/fonts/P2S.woff2") format("woff2"),
+    url("@/assets/fonts/P2S.woff") format("woff"),
+    url("@/assets/fonts/P2S.ttf") format("truetype");
 }

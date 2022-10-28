@@ -41,6 +41,10 @@
 @include tablet {
   .home-page {
     padding: 0;
+
+    &__hot-coffee {
+      display: none;
+    }
   }
 }
 

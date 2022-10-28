@@ -10,7 +10,6 @@
   border-radius: 30px;
   border: 15px solid #776b46;
   border-right-color: #897e58;
-  border-bottom: 20px #59512d;
   border-left-color: #675c35;
 
   position: relative;
@@ -37,6 +36,12 @@
 
     font-family: var(--pixel-font);
     font-size: 12px;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__screen-frame {

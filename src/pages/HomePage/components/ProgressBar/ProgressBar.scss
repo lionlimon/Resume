@@ -1,0 +1,51 @@
+@keyframes loading-item {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.progress-bar {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  margin: auto;
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__scale {
+    padding: 4px;
+    margin-top: 16px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+
+    border: 3px solid rgb(var(--green));;
+    max-width: 408px;
+    width: 100%;
+  }
+
+  &__scale-item {
+    //width: 16px;
+    height: 39px;
+
+    background-color: rgb(var(--green));
+
+    opacity: 0;
+
+    @for $i from 20 through 1 {
+      &:nth-child(#{$i}) {
+        animation: loading-item 0s #{calc($i / 5)}s forwards;
+      }
+    }
+  }
+}
