@@ -3,6 +3,38 @@ import {
 } from 'vue-router';
 import HomePage from '@/pages/HomePage';
 import GreetingsPage from '@/pages/GreetingsPage';
+import AboutPage from '@/pages/AboutPage';
+
+type ChildrenMeta = {
+  meta: {
+    ru: {
+      name: string
+    }
+  }
+}
+
+export const homePageChildren: (RouteRecordRaw & ChildrenMeta)[] = [
+  {
+    path: '/',
+    name: 'greetings',
+    component: GreetingsPage,
+    meta: {
+      ru: {
+        name: 'Привет',
+      },
+    },
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: AboutPage,
+    meta: {
+      ru: {
+        name: 'Обо мне',
+      },
+    },
+  },
+];
 
 const routes: RouteRecordRaw[] = [
   {
@@ -10,15 +42,7 @@ const routes: RouteRecordRaw[] = [
     component: HomePage,
     name: 'home',
 
-    children: [{
-      path: '/',
-      name: 'greetings',
-      component: GreetingsPage,
-    }, {
-      path: '/loading',
-      name: 'loading',
-      component: GreetingsPage,
-    }],
+    children: homePageChildren,
   },
 ];
 

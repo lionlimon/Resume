@@ -3,6 +3,10 @@
     <PCBox>
       <ProgressBar v-if="showLoading" />
       <RouterView v-show="!showLoading" />
+      <BottomMenu
+        v-show="!showLoading && $route.name !== 'greetings'"
+        class="home-page__menu"
+      />
     </PCBox>
 
     <HotCoffee class="home-page__hot-coffee" />
@@ -10,9 +14,8 @@
 </template>
 
 <script lang="ts" setup>
-import { RouterView } from 'vue-router';
-import usePCStore from '@/stores/pc';
 import { onMounted, ref } from 'vue';
+import BottomMenu from '@/pages/HomePage/components/BottomMenu';
 import ProgressBar from './components/ProgressBar';
 import PCBox from './components/PCBox';
 import HotCoffee from './components/HotCoffee';
