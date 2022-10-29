@@ -30,6 +30,25 @@
   &__menu {
     margin-top: auto;
   }
+
+
+  // Custom scroll
+  &__scroll {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &::v-deep(.ps__rail-y) {
+    background-color: transparent;
+  }
+
+  &::v-deep(.ps__thumb-y) {
+    width: 6px;
+    border-radius: 0;
+    background-color: rgb(var(--green));;
+  }
 }
 
 @include notebook {
