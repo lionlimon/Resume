@@ -1,0 +1,16 @@
+.experience {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+
+  &__item-labels {
+    display: flex;
+
+  }
+
+  &__item-label {
+    margin-right: 24px;
+  }
+}

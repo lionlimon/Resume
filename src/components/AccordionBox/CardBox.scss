@@ -1,0 +1,40 @@
+.accordion {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__content {
+    font-size: 12px;
+  }
+
+  &__toggle {
+    background-color: rgb(var(--green));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 1;
+    user-select: none;
+
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    &--active {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__toggle-symbol {
+    margin-top: 12px;
+    margin-left: 1px;
+  }
+}
