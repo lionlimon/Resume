@@ -1,7 +1,8 @@
 .label {
-  padding: 10px;
-  display: flex;
+  padding: 8px;
+  display: inline-flex;
   align-items: center;
+  font-size: 11px;
 
   background-color: rgb(var(--green));
   color: rgb(var(--black));

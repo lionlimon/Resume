@@ -1,0 +1,109 @@
+.history {
+  min-height: 100%;
+  padding-bottom: 50px;
+  $stripeWidth: 4px;
+
+  &__list {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 50px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+    }
+
+    // stripe
+    &:before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      bottom: 0;
+      top: 40px;
+      width: $stripeWidth;
+
+      background-color: rgb(var(--green));
+    }
+
+    // end point
+    &:after {
+      content: '8';
+      bottom: 0;
+
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      background-color: rgb(var(--black));
+
+      color: rgb(var(--green));
+      font-size: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transform: translateX(calc(-50% + #{$stripeWidth / 2}))
+        rotate(90deg);
+    }
+  }
+
+  &__item {
+    padding-left: 20px;
+    position: relative;
+    max-width: 390px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    // point
+    &:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 14px;
+      height: 14px;
+
+      border: 4px solid rgb(var(--green));
+      transform: translateX(calc(-50% + #{$stripeWidth / 2}));
+      background-color: rgb(var(--black));;
+    }
+
+    &:hover:before {
+      width: 22px;
+      height: 22px;
+    }
+
+    &:hover .history {
+
+      &__item-card {
+        border-color: rgb(var(--green));
+      }
+
+      &__hidden-content {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item-card {
+    margin-left: 30px;
+    border-color: transparent;
+  }
+
+  &__item-title {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  &__item-label {
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+
+  &__hidden-content {
+    opacity: 0;
+  }
+}
