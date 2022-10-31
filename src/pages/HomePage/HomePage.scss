@@ -11,24 +11,30 @@
   max-width: 1920px;
   max-height: 1080px;
   margin: auto;
+  position: relative;
 
   /* Table */
   &:after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    width: 100vw;
     height: 40vh;
+    transform: translateX(-50%);
+
     background-color: #715833;
     border-bottom: 36px solid #5C4829;
     z-index: -1;
+
+    box-shadow: 0px 50px 100px rgb(0, 0, 0, .5);
   }
 
   &__hot-coffee {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
   &__menu {
@@ -36,6 +42,22 @@
     margin-top: auto;
   }
 
+  &__photo {
+    position: absolute;
+  }
+
+  &__photo:first-child {
+    top: 20px;
+    right: 110px;
+
+    transform: translateX(-100%) rotate(-2deg);
+  }
+
+  &__photo:last-child {
+    top: 60px;
+    right: 70px;
+    transform: rotate(4deg);
+  }
 
   // Custom scroll
   &__scroll {

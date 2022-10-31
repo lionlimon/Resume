@@ -1,0 +1,49 @@
+.photo {
+  padding: 6px;
+  padding-bottom: 40px;
+
+  background-color: rgb(var(--white));
+  border-radius: 7px;
+
+  /*
+    --angle-1: <deg>
+    --angle-2: <deg>
+   */
+
+  // tapes
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+
+    width: 70px;
+    height: 18px;
+    background-color: rgb(var(--beige));
+  }
+
+  &:before {
+    transform: rotate(calc(-40deg - var(--angle-1) * 15));
+    left: -20px;
+    top: 5px;
+  }
+
+  &:after {
+    right: -20px;
+    transform: rotate(calc(40deg + var(--angle-2) * 15));
+    top: 5px;
+  }
+
+  &__picture {
+    width: 210px;
+    height: 210px;
+    display: block;
+    background-color: gray;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

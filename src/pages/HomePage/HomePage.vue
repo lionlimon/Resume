@@ -14,14 +14,33 @@
       />
     </PCBox>
 
+    <div class="home-page__photos">
+      <PhotoCard
+        class="home-page__photo"
+        :url="MY_PHOTO_2"
+        :url-webp="MY_PHOTO_2_WEBP"
+        alt="Пью чай, но очки вспотели"
+      />
+      <PhotoCard
+        class="home-page__photo"
+        :url="MY_PHOTO"
+        :url-webp="MY_PHOTO_WEBP"
+        alt="Я сижу в офисе. Делаю вид, что деловой"
+      />
+    </div>
+
     <HotCoffee class="home-page__hot-coffee" />
   </main>
 </template>
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
-import BottomMenu from '@/pages/HomePage/components/BottomMenu';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
+import PhotoCard from '@/components/PhotoCard';
+import {
+  MY_PHOTO, MY_PHOTO_WEBP, MY_PHOTO_2, MY_PHOTO_2_WEBP,
+} from './constants';
+import BottomMenu from './components/BottomMenu';
 import ProgressBar from './components/ProgressBar';
 import PCBox from './components/PCBox';
 import HotCoffee from './components/HotCoffee';
