@@ -16,21 +16,7 @@
       </template>
     </PCBox>
 
-    <div class="home-page__photos">
-      <PhotoCard
-        class="home-page__photo"
-        :url="MY_PHOTO_2"
-        :url-webp="MY_PHOTO_2_WEBP"
-        alt="Пью чай, но очки вспотели"
-      />
-      <PhotoCard
-        class="home-page__photo"
-        :url="MY_PHOTO"
-        :url-webp="MY_PHOTO_WEBP"
-        alt="Я сижу в офисе. Делаю вид, что деловой"
-      />
-    </div>
-
+    <PhotoList class="home-page__photos" />
     <HotCoffee class="home-page__hot-coffee" />
   </main>
 </template>
@@ -38,11 +24,8 @@
 <script lang="ts" setup>
 import { onMounted, ref, watch } from 'vue';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
-import PhotoCard from '@/components/PhotoCard';
 import usePCStore from '@/stores/pc';
-import {
-  MY_PHOTO, MY_PHOTO_WEBP, MY_PHOTO_2, MY_PHOTO_2_WEBP,
-} from './constants';
+import PhotoList from '@/pages/HomePage/components/PhotoList';
 import BottomMenu from './components/BottomMenu';
 import ProgressBar from './components/ProgressBar';
 import PCBox from './components/PCBox';

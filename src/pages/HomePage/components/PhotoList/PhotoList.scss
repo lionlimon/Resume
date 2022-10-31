@@ -1,0 +1,18 @@
+.photo-list {
+  &__photo {
+    position: absolute;
+  }
+
+  &__photo:first-child {
+    top: 20px;
+    right: 110px;
+
+    transform: translateX(-100%) rotate(-2deg);
+  }
+
+  &__photo:last-child {
+    top: 60px;
+    right: 70px;
+    transform: rotate(4deg);
+  }
+}
