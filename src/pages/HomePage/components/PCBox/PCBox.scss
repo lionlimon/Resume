@@ -43,6 +43,8 @@
   overflow: hidden;
   padding: 30px;
 
+  z-index: 1;
+
   &--fullscreen {
     position: absolute;
     top: 50%;
