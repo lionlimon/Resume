@@ -1,17 +1,19 @@
 <template>
   <main class="home-page">
-    <PCBox>
-      <ProgressBar v-if="showLoading" />
-      <PerfectScrollbar
-        v-show="!showLoading"
-        class="home-page__scroll"
-      >
-        <RouterView />
-      </PerfectScrollbar>
-      <BottomMenu
-        v-show="!showLoading && $route.name !== 'greetings'"
-        class="home-page__menu"
-      />
+    <PCBox ref="pc">
+      <template v-if="store.pcIsEnabled">
+        <ProgressBar v-if="showLoading" />
+        <PerfectScrollbar
+          v-show="!showLoading"
+          class="home-page__scroll"
+        >
+          <RouterView />
+        </PerfectScrollbar>
+        <BottomMenu
+          v-show="!showLoading && $route.name !== 'greetings'"
+          class="home-page__menu"
+        />
+      </template>
     </PCBox>
 
     <div class="home-page__photos">
@@ -34,9 +36,10 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 import PhotoCard from '@/components/PhotoCard';
+import usePCStore from '@/stores/pc';
 import {
   MY_PHOTO, MY_PHOTO_WEBP, MY_PHOTO_2, MY_PHOTO_2_WEBP,
 } from './constants';
@@ -45,11 +48,20 @@ import ProgressBar from './components/ProgressBar';
 import PCBox from './components/PCBox';
 import HotCoffee from './components/HotCoffee';
 
+const store = usePCStore();
+const pc = ref<typeof PCBox>(null!);
 const showLoading = ref(true);
 
-onMounted(() => setTimeout(() => {
-  showLoading.value = false;
-}, 4000));
+onMounted(() => {
+  if (pc.value.$el) store.addSoundListenersForClick(pc.value.$el as HTMLElement);
+});
+
+watch(store, () => {
+  if (!store.pcIsEnabled) return;
+  setTimeout(() => {
+    showLoading.value = false;
+  }, 4000);
+});
 </script>
 
 <style src="vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css" />

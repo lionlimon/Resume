@@ -24,7 +24,7 @@ const emit = defineEmits(['update:modelValue']);
 
 defineProps<{ modelValue: boolean }>();
 
-watch(active, () => emit('update:modelValue', active.value));
+watch(active, () => emit('update:modelValue', !active.value));
 </script>
 
 <style scoped lang="scss" src="./SwitchButton.scss"></style>

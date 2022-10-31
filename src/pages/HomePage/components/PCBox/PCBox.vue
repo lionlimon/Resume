@@ -23,7 +23,10 @@
 
       <div class="pc__drive" />
 
-      <RoundButton class="pc__turn-on">
+      <RoundButton
+        class="pc__turn-on"
+        @click="store.setPCIsEnabled(true)"
+      >
         <SvgIcon
           class="pc__turn-on-icon"
           name="turn-on"
@@ -39,9 +42,15 @@
 import SvgIcon from '@/components/SvgIcon';
 import SwitchButton from '@/components/SwitchButton';
 import RoundButton from '@/components/RoundButton';
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import usePCStore from '@/stores/pc';
 
-const volumeIsOn = ref(false);
+const store = usePCStore();
+const volumeIsOn = ref(true);
+
+watch(volumeIsOn, () => {
+  store.setVolumeIsEnabled(volumeIsOn.value);
+}, { immediate: true });
 </script>
 
 <style scoped lang="scss" src="./PCBox.scss"></style>

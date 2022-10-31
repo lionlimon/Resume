@@ -18,6 +18,10 @@ button {
   border: none;
 }
 
+vite-error-overlay {
+  z-index: 9999;
+}
+
 .app {
   height: 100vh;
   width: 100vw;
