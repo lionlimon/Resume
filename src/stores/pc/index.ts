@@ -5,6 +5,7 @@ const usePCStore = defineStore('pc', {
   state: () => ({
     pcIsEnabled: false,
     volumeIsEnabled: false,
+    fullScreenIsEnabled: false,
   }),
 
   actions: {
@@ -17,6 +18,10 @@ const usePCStore = defineStore('pc', {
       if (this.volumeIsEnabled && isEnabled) this.playStartSound();
       if (!isEnabled) Sound.stopAllSounds();
       this.pcIsEnabled = isEnabled;
+    },
+
+    toggleFullScreenIsEnabled() {
+      this.fullScreenIsEnabled = !this.fullScreenIsEnabled;
     },
 
     addSoundListenersForClick(el: HTMLElement) {

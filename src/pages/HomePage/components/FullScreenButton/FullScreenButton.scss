@@ -1,0 +1,12 @@
+.full-screen {
+  border: none;
+  background-color: transparent;
+  display: inline-flex;
+  cursor: pointer;
+
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+}

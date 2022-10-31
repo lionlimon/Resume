@@ -1,6 +1,9 @@
 <template>
   <main class="home-page">
-    <PCBox ref="pc">
+    <PCBox
+      ref="pc"
+      :full-screen="store.fullScreenIsEnabled"
+    >
       <template v-if="store.pcIsEnabled">
         <ProgressBar v-if="showLoading" />
         <PerfectScrollbar
@@ -12,6 +15,10 @@
         <BottomMenu
           v-show="!showLoading && $route.name !== 'greetings'"
           class="home-page__menu"
+        />
+        <FullScreenButton
+          class="home-page__screen"
+          @click="store.toggleFullScreenIsEnabled"
         />
       </template>
     </PCBox>
@@ -26,6 +33,7 @@ import { onMounted, ref, watch } from 'vue';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 import usePCStore from '@/stores/pc';
 import PhotoList from '@/pages/HomePage/components/PhotoList';
+import FullScreenButton from '@/pages/HomePage/components/FullScreenButton';
 import BottomMenu from './components/BottomMenu';
 import ProgressBar from './components/ProgressBar';
 import PCBox from './components/PCBox';

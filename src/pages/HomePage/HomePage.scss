@@ -50,6 +50,12 @@
     flex-direction: column;
   }
 
+  &__screen {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+  }
+
   &::v-deep(.ps__rail-y) {
     background-color: transparent;
   }

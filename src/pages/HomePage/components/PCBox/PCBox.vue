@@ -1,5 +1,5 @@
 <template>
-  <div class="pc">
+  <div :class="['pc', pcModifiers]">
     <div class="pc__screen-frame pc__super-ellipse">
       <div class="pc__screen pc__super-ellipse">
         <div class="pc__screen-light" />
@@ -38,15 +38,18 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import SvgIcon from '@/components/SvgIcon';
 import SwitchButton from '@/components/SwitchButton';
 import RoundButton from '@/components/RoundButton';
-import { ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 import usePCStore from '@/stores/pc';
 
 const store = usePCStore();
 const volumeIsOn = ref(true);
+const props = defineProps<{fullScreen: boolean}>();
+
+const pcModifiers = computed(() => ({ 'pc--fullscreen': props.fullScreen }));
 
 watch(volumeIsOn, () => {
   store.setVolumeIsEnabled(volumeIsOn.value);
