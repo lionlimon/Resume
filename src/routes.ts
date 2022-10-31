@@ -78,9 +78,8 @@ const routes: RouteRecordRaw[] = [
     children: homePageChildren,
   },
 ];
-
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.MODE === 'development' ? '' : 'Resume'),
   routes,
 });
 
