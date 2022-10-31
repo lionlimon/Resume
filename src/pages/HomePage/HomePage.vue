@@ -44,6 +44,10 @@ const pc = ref<typeof PCBox>(null!);
 const showLoading = ref(true);
 
 onMounted(() => {
+  // На телефонах не будет кнопки включения :)
+  if (window.innerWidth <= 1279) {
+    store.setPCIsEnabled(true);
+  }
   if (pc.value.$el) store.addSoundListenersForClick(pc.value.$el as HTMLElement);
 });
 

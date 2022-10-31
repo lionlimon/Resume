@@ -18,7 +18,14 @@ export default class Sound {
   }
 
   static play(soundName: SoundMapKeys) {
-    this.audioList[soundName].play();
+    const audio = this.audioList[soundName];
+    audio.play();
+
+    return {
+      volume(vol: number) {
+        audio.volume = vol;
+      },
+    };
   }
 
   static stopAllSounds() {

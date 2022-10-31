@@ -28,7 +28,8 @@ const usePCStore = defineStore('pc', {
       el.addEventListener('click', ({ target }) => {
         if (!(target && target instanceof Element) || !this.volumeIsEnabled) return;
         if ((target.tagName === 'A' || target.tagName === 'BUTTON')) {
-          Sound.play('CLICK');
+          Sound.play('CLICK')
+            .volume(0.1);
         }
       });
     },

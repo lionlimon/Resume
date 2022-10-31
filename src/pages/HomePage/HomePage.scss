@@ -81,7 +81,9 @@
   .home-page {
     padding: 0;
 
-    &__hot-coffee {
+    &__hot-coffee,
+    &__photos,
+    &__screen {
       display: none;
     }
   }

@@ -305,3 +305,11 @@
   }
 }
 
+@include phone {
+  .pc {
+    &__screen {
+      padding: 25px;
+    }
+  }
+}
+
