@@ -1,3 +1,3 @@
-import CardBox from './CardBox.vue';
+import CardBox from './AccordionBox.vue';
 
 export default CardBox;

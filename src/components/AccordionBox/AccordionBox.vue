@@ -34,4 +34,4 @@ const props = defineProps<{
 
 </script>
 
-<style scoped lang="scss" src="./CardBox.scss"></style>
+<style scoped lang="scss" src="./AccordionBox.scss"></style>
