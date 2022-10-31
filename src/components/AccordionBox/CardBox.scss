@@ -28,6 +28,10 @@
     height: 24px;
     cursor: pointer;
 
+    &:focus-visible {
+      transform: scale(1.5);
+    }
+
     &--active {
       transform: rotate(180deg);
     }

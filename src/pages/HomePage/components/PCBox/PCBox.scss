@@ -102,6 +102,11 @@
       color: rgb(var(--black));
     }
 
+    &::v-deep(*:focus-visible) {
+      outline: none;
+      box-shadow: inset 0px 0px 0px 2px rgb(var(--green));
+    }
+
     // Links in pc content
     &::v-deep(a) {
       color: rgba(var(--green), .7);
