@@ -13,6 +13,20 @@
 
   &__content {
     font-size: 12px;
+    border-top: 2px solid rgb(var(--green));
+    margin-top: 10px;
+
+    &::v-deep(li) {
+      margin-top: 12px;
+
+      &:first-child {
+        margin-top: 15px;
+      }
+
+      &:before {
+        content: "- ";
+      }
+    }
   }
 
   &__toggle {

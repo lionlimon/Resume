@@ -2,23 +2,24 @@
   <div class="history">
     <ul class="history__list">
       <li
-        v-for="project in HistoryList"
-        :key="project.title"
+        v-for="company in HistoryList"
+        :key="company.title"
         class="history__item"
       >
         <CardBox class="history__item-card">
           <h3 class="history__item-title">
-            {{ project.title }}
+            {{ company.title }}
           </h3>
 
           <div class="history__hidden-content">
             <LabelBox class="history__item-label">
-              {{ project.date }}
+              {{ company.date }}
             </LabelBox>
 
-            <div class="history__hidden-content">
-              {{ project.text }}
-            </div>
+            <div
+              class="history__hidden-content"
+              v-html="company.text"
+            />
           </div>
         </CardBox>
       </li>
