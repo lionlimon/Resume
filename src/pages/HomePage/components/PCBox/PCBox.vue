@@ -25,7 +25,7 @@
 
       <RoundButton
         class="pc__turn-on"
-        @click="store.setPCIsEnabled(true)"
+        @click="store.setPCIsEnabled(!store.pcIsEnabled)"
       >
         <SvgIcon
           class="pc__turn-on-icon"

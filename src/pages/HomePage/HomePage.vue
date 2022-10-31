@@ -57,7 +57,11 @@ onMounted(() => {
 });
 
 watch(store, () => {
-  if (!store.pcIsEnabled) return;
+  if (!store.pcIsEnabled) {
+    showLoading.value = true;
+    return;
+  }
+
   setTimeout(() => {
     showLoading.value = false;
   }, 4000);

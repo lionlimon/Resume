@@ -15,6 +15,7 @@ const usePCStore = defineStore('pc', {
 
     setPCIsEnabled(isEnabled: boolean) {
       if (this.volumeIsEnabled && isEnabled) this.playStartSound();
+      if (!isEnabled) Sound.stopAllSounds();
       this.pcIsEnabled = isEnabled;
     },
 
