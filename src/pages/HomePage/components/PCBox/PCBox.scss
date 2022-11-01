@@ -148,7 +148,7 @@
     background-color: #968656;
     width: 950px;
     height: 675px;
-    max-height: 65vh;
+    max-height: 60vh;
     max-width: 100%;
     border-radius: 20px;
     padding: 18px;
@@ -280,9 +280,18 @@
     max-width: 55vw;
     height: min(950px, 95vh);
 
+    &__screen-frame {
+      max-height: 63vh;
+    }
+
     &--fullscreen {
       max-width: none;
       height: 100vh;
+    }
+
+    &__bottom-panel {
+      padding-top: 25px;
+      padding-bottom: 20px;
     }
 
     &__super-ellipse {
