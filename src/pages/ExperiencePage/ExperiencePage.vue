@@ -10,7 +10,7 @@
         хорошо знаю css, js, html, es6+, sass, pug и всё причастное
       </li>
       <li class="experience__ul-item">
-        Знаю разработку spa приложений на react и vue
+        Знаю разработку SPA приложений на react и vue
       </li>
       <li class="experience__ul-item">
         Знаком с webpack, parcel и gulp, поэтому могу настроить инфраструктуру фронта
@@ -39,6 +39,10 @@
         Нёс ответственность за проекты
       </li>
     </ul>
+
+    <h2 class="experience__title">
+      Проекты
+    </h2>
 
     <p class="experience__description">
       За всё время имел дело с множеством проектов,

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --base=/Resume",
+    "build": "vue-tsc --noEmit && vite build --base=/Resume/",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore . --fix",
     "preview": "vite preview",
     "lint:style": "stylelint src/**/*.{css,scss,vue} --fix",

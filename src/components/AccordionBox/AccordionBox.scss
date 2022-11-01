@@ -7,17 +7,17 @@
   }
 
   &__title {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
   }
 
   &__content {
-    font-size: 12px;
+    font-size: 14px;
     border-top: 2px solid rgb(var(--green));
     margin-top: 10px;
 
     &::v-deep(li) {
-      margin-top: 12px;
+      margin-top: 8px;
 
       &:first-child {
         margin-top: 15px;
@@ -52,7 +52,7 @@
   }
 
   &__toggle-symbol {
-    margin-top: 12px;
     margin-left: 1px;
+    color: rgb(var(--black));
   }
 }

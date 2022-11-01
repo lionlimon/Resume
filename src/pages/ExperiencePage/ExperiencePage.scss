@@ -1,6 +1,7 @@
 .experience {
   &__title {
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: -0.5px;
   }
 
   &__description {
@@ -23,7 +24,7 @@
   }
 
   &__ul-item {
-    margin-top: 10px;
+    margin-top: 5px;
 
     &:before {
       content: '-';

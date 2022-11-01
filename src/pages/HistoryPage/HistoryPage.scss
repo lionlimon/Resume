@@ -94,12 +94,13 @@
 
   &__item-title {
     margin: 0;
-    font-size: 12px;
+    font-size: 18px;
   }
 
   &__item-label {
     margin-top: 5px;
     margin-bottom: 8px;
+    letter-spacing: -.5px;
   }
 
   &__hidden-content {
