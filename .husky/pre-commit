@@ -3,4 +3,3 @@
 
 yarn run lint:script
 yarn run lint:style
-yarn run deploy

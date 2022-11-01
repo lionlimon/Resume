@@ -17,7 +17,7 @@
         height="210"
         class="photo__img"
         :src="url"
-        alt="alt"
+        :alt="alt"
       >
     </picture>
   </div>
