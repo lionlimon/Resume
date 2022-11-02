@@ -8,6 +8,7 @@
         <ProgressBar v-if="showLoading" />
         <PerfectScrollbar
           v-show="!showLoading"
+          ref="scroll"
           class="home-page__scroll"
         >
           <RouterView />
@@ -29,11 +30,14 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, watch } from 'vue';
+import {
+  onMounted, ref, watch, ComponentPublicInstance,
+} from 'vue';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 import usePCStore from '@/stores/pc';
 import PhotoList from '@/pages/HomePage/components/PhotoList';
 import FullScreenButton from '@/pages/HomePage/components/FullScreenButton';
+import { useRoute } from 'vue-router';
 import BottomMenu from './components/BottomMenu';
 import ProgressBar from './components/ProgressBar';
 import PCBox from './components/PCBox';
@@ -42,6 +46,8 @@ import HotCoffee from './components/HotCoffee';
 const store = usePCStore();
 const pc = ref<typeof PCBox>(null!);
 const showLoading = ref(true);
+const route = useRoute();
+const scroll = ref<ComponentPublicInstance<PerfectScrollbar>>(null!);
 
 onMounted(() => {
   // На телефонах не будет кнопки включения :)
@@ -60,6 +66,10 @@ watch(store, () => {
   setTimeout(() => {
     showLoading.value = false;
   }, 4000);
+});
+
+watch(route, () => {
+  scroll.value.$el.scrollTop = 0;
 });
 </script>
 
