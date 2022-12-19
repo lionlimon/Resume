@@ -65,6 +65,14 @@
     border-radius: 0;
     background-color: rgb(var(--green));;
   }
+
+  &__garland {
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    top: -180px;
+    transform: translateX(-50%);
+  }
 }
 
 @include notebook {
@@ -74,12 +82,20 @@
     &:after {
       border-bottom-width: 10px;
     }
+
+    &__garland {
+      top: -150px;
+    }
   }
 }
 
 @include tablet {
   .home-page {
     padding: 0;
+
+    &__garland {
+      top: -170px;
+    }
 
     &__hot-coffee,
     &__photos,
@@ -89,3 +105,10 @@
   }
 }
 
+@include phone {
+  .home-page {
+    &__garland {
+      display: none;
+    }
+  }
+}

@@ -1,5 +1,11 @@
 <template>
   <main class="home-page">
+    <img
+      v-if="showGarland"
+      class="home-page__garland"
+      src="@/assets/img/garland.svg"
+      alt="Retro garland"
+    >
     <PCBox
       ref="pc"
       :full-screen="store.fullScreenIsEnabled"
@@ -38,6 +44,7 @@ import usePCStore from '@/stores/pc';
 import PhotoList from '@/pages/HomePage/components/PhotoList';
 import FullScreenButton from '@/pages/HomePage/components/FullScreenButton';
 import { useRoute } from 'vue-router';
+import isNewYearRange from '@/utils/isNewYearRange';
 import BottomMenu from './components/BottomMenu';
 import ProgressBar from './components/ProgressBar';
 import PCBox from './components/PCBox';
@@ -48,6 +55,7 @@ const pc = ref<typeof PCBox>(null!);
 const showLoading = ref(true);
 const route = useRoute();
 const scroll = ref<ComponentPublicInstance<PerfectScrollbar>>(null!);
+const showGarland = isNewYearRange();
 
 onMounted(() => {
   // На телефонах не будет кнопки включения :)

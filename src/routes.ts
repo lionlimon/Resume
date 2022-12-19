@@ -1,5 +1,5 @@
 import {
-  createRouter, createWebHistory, RouteRecordRaw,
+  createRouter, createWebHashHistory, RouteRecordRaw,
 } from 'vue-router';
 import HomePage from '@/pages/HomePage';
 import GreetingsPage from '@/pages/GreetingsPage';
@@ -79,7 +79,7 @@ const routes: RouteRecordRaw[] = [
   },
 ];
 const router = createRouter({
-  history: createWebHistory(import.meta.env.MODE === 'development' ? '' : 'Resume'),
+  history: createWebHashHistory(import.meta.env.MODE === 'development' ? '' : 'Resume'),
   routes,
 });
 
