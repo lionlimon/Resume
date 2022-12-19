@@ -51,6 +51,12 @@
     }
   }
 
+  &__button {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+  }
+
   &__toggle-symbol {
     margin-left: 1px;
     color: rgb(var(--black));

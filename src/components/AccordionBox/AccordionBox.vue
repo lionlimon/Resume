@@ -5,7 +5,9 @@
       @click="isOpen = !isOpen"
     >
       <h3 class="accordion__title">
-        {{ props.title }}
+        <button class="accordion__button">
+          {{ title }}
+        </button>
       </h3>
 
       <button :class="['accordion__toggle', toggleModifiers]">

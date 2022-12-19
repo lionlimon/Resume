@@ -25,9 +25,13 @@ const usePCStore = defineStore('pc', {
     },
 
     addSoundListenersForClick(el: HTMLElement) {
+      const checkElement = (target: Element, tagName: string) => (
+        target.tagName === tagName || target.parentElement!.tagName === tagName
+      );
+
       el.addEventListener('click', ({ target }) => {
         if (!(target && target instanceof Element) || !this.volumeIsEnabled) return;
-        if ((target.tagName === 'A' || target.tagName === 'BUTTON')) {
+        if (checkElement(target, 'A') || checkElement(target, 'BUTTON')) {
           Sound.play('CLICK')
             .volume(0.1);
         }
