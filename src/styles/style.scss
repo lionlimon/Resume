@@ -22,12 +22,14 @@ vite-error-overlay {
   z-index: 9999;
 }
 
+/* stylelint-disable */
 html  {height: -webkit-fill-available;}
 body {
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
 }
+/* stylelint-enable */
 
 .app {
   height: 100vh;
