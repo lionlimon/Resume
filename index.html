@@ -8,11 +8,19 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/Resume/favicon-16x16.png">
 		<link rel="manifest" href="/Resume/site.webmanifest">
     <title>Лев Каплунов</title>
-    <script type="module" crossorigin src="/Resume/assets/index.bda62a0e.js"></script>
-    <link rel="stylesheet" href="/Resume/assets/index.c2342906.css">
+    <script type="module" crossorigin src="/Resume/assets/index.5e23a18f.js"></script>
+    <link rel="stylesheet" href="/Resume/assets/index.b4c7ff87.css">
   </head>
   <body>
     <div id="app" class="app"></div>
     
+		<script>
+			function calculateVh() {
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			}
+			calculateVh();
+			window.addEventListener('resize', calculateVh);
+		</script>
   </body>
 </html>
