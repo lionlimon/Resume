@@ -30,7 +30,7 @@ import { computed, ref } from 'vue';
 
 const isOpen = ref(false);
 const toggleModifiers = computed(() => ({ 'accordion__toggle--active': isOpen.value }));
-const props = defineProps<{
+defineProps<{
   title: string
 }>();
 

@@ -12,5 +12,13 @@
   <body>
     <div id="app" class="app"></div>
     <script type="module" src="/src/main.ts"></script>
+		<script>
+			function calculateVh() {
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			}
+			calculateVh();
+			window.addEventListener('resize', calculateVh);
+		</script>
   </body>
 </html>

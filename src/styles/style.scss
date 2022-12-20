@@ -23,16 +23,14 @@ vite-error-overlay {
 }
 
 /* stylelint-disable */
-html  {height: -webkit-fill-available;}
-body {
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+html,
+body,
+.app  {
+  height: calc(var(--vh, 1vh) * 100);
 }
 /* stylelint-enable */
 
 .app {
-  height: 100vh;
   width: 100vw;
   overflow: hidden;
   position: relative;
