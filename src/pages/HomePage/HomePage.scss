@@ -68,10 +68,10 @@
   }
 
   &__garland {
-    position: absolute;
+    position: fixed;
     z-index: 99;
     left: 50%;
-    top: -160px;
+    top: -90px;
     transform: translateX(-50%);
     pointer-events: none;
   }
@@ -84,10 +84,6 @@
     &:after {
       border-bottom-width: 10px;
     }
-
-    &__garland {
-      top: -150px;
-    }
   }
 }
 
@@ -96,7 +92,7 @@
     padding: 0;
 
     &__garland {
-      top: -170px;
+      top: -125px;
     }
 
     &__hot-coffee,
