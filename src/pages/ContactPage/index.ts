@@ -1,3 +1,3 @@
-import AboutPage from './AboutPage.vue';
+import ContactPage from './ContactPage.vue';
 
-export default AboutPage;
+export default ContactPage;

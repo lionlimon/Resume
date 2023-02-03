@@ -7,5 +7,3 @@
     </ul>
   </div>
 </template>
-
-<style scoped lang="scss" src="./AboutPage.scss"></style>
