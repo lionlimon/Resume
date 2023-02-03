@@ -56,7 +56,6 @@ const showLoading = ref(true);
 const route = useRoute();
 const scroll = ref<ComponentPublicInstance<PerfectScrollbar>>(null!);
 const showGarland = isNewYearRange();
-
 onMounted(() => {
   // На телефонах не будет кнопки включения :)
   if (window.innerWidth <= 1279) {

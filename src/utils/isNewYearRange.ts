@@ -1,9 +1,7 @@
 export default function isNewYearRange() {
   const now = new Date();
-  const today = now.getTime();
-  const year = now.getFullYear();
-  const from = new Date(`12/15/${year}`).getTime();
-  const to = new Date(`01/15/${year + 1}`).getTime();
+  const month = now.getMonth();
+  const day = now.getDate();
 
-  return today >= from && today <= to;
+  return (month === 0 && day < 15) || (month === 12 && day > 15);
 }
