@@ -7,6 +7,7 @@ import AboutPage from '@/pages/AboutPage';
 import StackPage from '@/pages/StackPage';
 import ExperiencePage from '@/pages/ExperiencePage';
 import HistoryPage from '@/pages/HistoryPage';
+import ContactPage from '@/pages/ContactPage';
 
 type ChildrenMeta = {
   meta: {
@@ -64,6 +65,16 @@ export const homePageChildren: (RouteRecordRaw & ChildrenMeta)[] = [
     meta: {
       ru: {
         name: 'Хронология по компаниям',
+      },
+    },
+  },
+  {
+    path: '/contacts',
+    name: 'contacts',
+    component: ContactPage,
+    meta: {
+      ru: {
+        name: 'Контакты',
       },
     },
   },
