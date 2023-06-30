@@ -13,7 +13,7 @@
   margin: auto;
   position: relative;
 
-  /* Table */
+  /* Desktop */
   &:after {
     content: '';
     position: absolute;
@@ -25,12 +25,13 @@
 
     background-color: #715833;
     border-bottom: 36px solid #5C4829;
-    z-index: -1;
+    z-index: 0;
 
     box-shadow: 0px 50px 100px rgb(0, 0, 0, .5);
   }
 
   &__hot-coffee {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
