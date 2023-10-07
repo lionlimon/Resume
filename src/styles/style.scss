@@ -60,3 +60,31 @@ body,
     pointer-events: none;
   }
 }
+
+.nda {
+  height: 12px;
+  width: 80px;
+  background-color: rgb(var(--green));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade infinite 0.7s alternate;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &::before {
+    content: "NDA";
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

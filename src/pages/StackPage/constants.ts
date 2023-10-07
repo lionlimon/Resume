@@ -3,15 +3,15 @@ import { StackItem } from './types';
 const stackList: StackItem[] = [
   {
     title: 'TypeScript',
-    progress: 4,
+    progress: 6,
   },
   {
     title: 'React',
-    progress: 5,
+    progress: 4,
   },
   {
     title: 'Vue 3',
-    progress: 2,
+    progress: 9,
   },
   {
     title: 'Vue 2',
@@ -19,7 +19,7 @@ const stackList: StackItem[] = [
   },
   {
     title: 'Nuxt',
-    progress: 4,
+    progress: 6,
   },
   {
     title: 'Node',
@@ -39,6 +39,10 @@ const stackList: StackItem[] = [
   },
   {
     title: 'Webpack',
+    progress: 4,
+  },
+  {
+    title: 'Vite',
     progress: 5,
   },
 ];

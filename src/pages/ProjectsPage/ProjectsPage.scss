@@ -1,0 +1,25 @@
+.projects {
+  &__title {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+
+  &__item-labels {
+    display: flex;
+    margin-top: 15px;
+  }
+
+  &__item-label {
+    margin-right: 24px;
+  }
+}
