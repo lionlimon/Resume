@@ -13,7 +13,7 @@ const historyList: HistoryItem[] = [
   },
 
   {
-    title: 'Reliz | Yandex practikum',
+    title: 'Reliz | Yandex practicum',
     text: '<p>В Релизе состоял в небольшой команде frontend разработчиков.</p>'
       + '<p>'
         + 'Работал с лендингами-пейволами для подписок '
@@ -27,8 +27,13 @@ const historyList: HistoryItem[] = [
   },
 
   {
-    title: 'Mego travel',
-    text: 'Устроен на испытательный срок',
+    title: 'Aviasales (Mego travel)',
+    text: `
+      <p>
+        Работаю в классной команде над проектом mego.travel. 
+        Работаем с поиском билетов, оформлением заказов, оплатой, личным кабинетом и другим функционалом
+      </p>
+    `,
     date: '2023 - ...',
   },
 ];
