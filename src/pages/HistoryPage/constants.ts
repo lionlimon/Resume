@@ -27,10 +27,10 @@ const historyList: HistoryItem[] = [
   },
 
   {
-    title: 'Aviasales (Mego travel)',
+    title: 'Aviasales',
     text: `
       <p>
-        Работаю в классной команде над проектом <a href="https://mego.travel" target="_blank">mego.travel</a>. 
+        Работаю в классной команде над проектом по продаже билетов. 
         Работаем с поиском билетов, оформлением заказов, оплатой, личным кабинетом и другим функционалом.
       </p>
     `,
